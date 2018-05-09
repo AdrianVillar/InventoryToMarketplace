@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "361008b8-dce6-46ef-8c42-04d55a57b5cb",
+		"name": "S4HC API Examples",
+		"description": "Examples using SAP S/4HANA Cloud to get information about Product Master Data and Availability using API\n\nGet APIKey from https://api.sap.com\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "A_Product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_PRODUCT_SRV/A_Product",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"s4hanacloud",
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_PRODUCT_SRV",
+						"A_Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A_Product XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_PRODUCT_SRV/A_Product",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"s4hanacloud",
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_PRODUCT_SRV",
+						"A_Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A_Product('TG11')",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_PRODUCT_SRV/A_Product('TG11')",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"s4hanacloud",
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_PRODUCT_SRV",
+						"A_Product('TG11')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A_ProductPlant",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_PRODUCT_SRV/A_ProductPlant",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"s4hanacloud",
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_PRODUCT_SRV",
+						"A_ProductPlant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A_Product('TG11')/to_Plant",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_PRODUCT_SRV/A_Product('TG11')/to_Plant",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"s4hanacloud",
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_PRODUCT_SRV",
+						"A_Product('TG11')",
+						"to_Plant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A_ProductPlant(Product='TG11',Plant='1710')",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_PRODUCT_SRV/A_ProductPlant(Product='TG11',Plant='1710')",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"s4hanacloud",
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_PRODUCT_SRV",
+						"A_ProductPlant(Product='TG11',Plant='1710')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CalculateAvailabilityTimeseries",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_PRODUCT_AVAILY_INFO_BASIC/CalculateAvailabilityTimeseries?SupplyingPlant=%271710%27&Material=%27TG11%27&ATPCheckingRule=%27A%27",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"s4hanacloud",
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_PRODUCT_AVAILY_INFO_BASIC",
+						"CalculateAvailabilityTimeseries"
+					],
+					"query": [
+						{
+							"key": "SupplyingPlant",
+							"value": "%271710%27"
+						},
+						{
+							"key": "Material",
+							"value": "%27TG11%27"
+						},
+						{
+							"key": "ATPCheckingRule",
+							"value": "%27A%27"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bf5f9a03-7256-468a-a9ef-69393cb607a1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "83ef7c10-b4d2-4697-a37c-9a7eb50448b2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "a3912c1e-84a3-4778-a177-595eec11a6dc",
+			"key": "APIKey",
+			"value": "",
+			"type": "string",
+			"description": ""
+		}
+	]
+}

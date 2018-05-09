@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "80aefcdf-c81d-45e0-9aa1-2f2b1f7c1daf",
+		"name": "MercadoLibre API Examples",
+		"description": "Examples Mercado Libre to update stock levels using API\n\nGo to https://developers.mercadolibre.com.ar/apps to create an App and get the tokens",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Test User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \t\"site_id\":\"MLA\"\n}"
+				},
+				"url": {
+					"raw": "https://api.mercadolibre.com/users/test_user?access_token={{access_token_developer}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"mercadolibre",
+						"com"
+					],
+					"path": [
+						"users",
+						"test_user"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token_developer}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://api.mercadolibre.com/items/{{id}}?access_token={{access_token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"mercadolibre",
+						"com"
+					],
+					"path": [
+						"items",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Item - Inventario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"available_quantity\": 6\r\n}"
+				},
+				"url": {
+					"raw": "https://api.mercadolibre.com/items/{{id}}?access_token={{access_token_test}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"mercadolibre",
+						"com"
+					],
+					"path": [
+						"items",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token_test}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "548daa0e-869a-4789-b1a2-3e3c8e7a255c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "dc4d3729-cd38-4114-86ba-19b961d8fd49",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "50660e74-027e-424a-b0e0-59a92370f8a6",
+			"key": "access_token_developer",
+			"value": "",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "ce3ada3c-46ed-4076-89d0-093249af87b1",
+			"key": "id",
+			"value": "",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "05c70f55-111b-4747-a980-3d4edd6ccf00",
+			"key": "access_token_test",
+			"value": "",
+			"type": "string",
+			"description": ""
+		}
+	]
+}
