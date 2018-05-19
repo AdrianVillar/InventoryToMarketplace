@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "7a97dd35-fa9d-409e-b1fb-53c440f64500",
+		"name": "Wish API Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "{{clientID}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{clientSecret}}",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "17c2a4d5501640edaed0b128e7a680bb",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "{{redirectURI}}",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sandbox.merchant.wish.com/api/v2/oauth/access_token",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"merchant",
+						"wish",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oauth",
+						"access_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "{{clientID}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{clientSecret}}",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "{{resfresh_token}}",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sandbox.merchant.wish.com/api/v2/oauth/refresh_token",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"merchant",
+						"wish",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oauth",
+						"refresh_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sandbox.merchant.wish.com/api/v2/product/multi-get?access_token={{access_token}}",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"merchant",
+						"wish",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"product",
+						"multi-get"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sandbox.merchant.wish.com/api/v2/product?id={{productId}}&access_token={{access_token}}",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"merchant",
+						"wish",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"product"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{productId}}"
+						},
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						}
+					]
+				},
+				"description": "Generated from a curl request: \ncurl \\\"https://merchant.wish.com/api/v2/product?id=4ef2858a9795c776ce000120&access_token=an_example_access_token\\\""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Inventory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "sku",
+							"value": "{{sku}}",
+							"type": "text"
+						},
+						{
+							"key": "inventory",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "access_token",
+							"value": "{{access_token}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sandbox.merchant.wish.com/api/v2/variant/update-inventory",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"merchant",
+						"wish",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"variant",
+						"update-inventory"
+					]
+				},
+				"description": "Generated from a curl request: \ncurl https://merchant.wish.com/api/v2/variant/update-inventory -d \\\"sku=blue-shoe-11&inventory=100&access_token=an_example_access_token\\\""
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2ccde13f-a2c4-419c-a62e-14c5c4e5f5af",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6d78801c-5a6f-40b5-b6c7-29b05280d127",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "44c3ad0c-db73-4502-a8dc-95e2e8fd756b",
+			"key": "clientID",
+			"value": "",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "077fe91c-9342-411b-b449-9efd6da52a52",
+			"key": "clientSecret",
+			"value": "",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "419f5084-5864-4b85-bb5a-8a2ccc5dffb2",
+			"key": "redirectURI",
+			"value": "",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "ee500752-1baf-49ca-9259-da746755e7a9",
+			"key": "access_token",
+			"value": "",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "ca5a40a2-b40d-43ce-8469-54280a20d4f5",
+			"key": "resfresh_token",
+			"value": "",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "111f227f-0d58-451f-8eb3-0c6db23132b6",
+			"key": "productId",
+			"value": "",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "dea422b7-7aa0-4ffc-a3d1-fb685ac5cec4",
+			"key": "sku",
+			"value": "",
+			"type": "string",
+			"description": ""
+		}
+	]
+}
