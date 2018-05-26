@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MELIInventory", "MELIInvent
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvToMarketBatch", "InvToMarketBatch\InvToMarketBatch.csproj", "{9107F9DB-CD9B-4494-959F-DA3F95DBEDCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishAPIInventory", "WishAPIInventory\WishAPIInventory.csproj", "{72A42BC8-4950-4178-AD01-7A0569E00A88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishAPIInventory", "WishAPIInventory\WishAPIInventory.csproj", "{72A42BC8-4950-4178-AD01-7A0569E00A88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvToMarketDurable", "InvToMarketDurable\InvToMarketDurable.csproj", "{C7AD7827-F59B-458D-8185-73A4A7079C65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{72A42BC8-4950-4178-AD01-7A0569E00A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72A42BC8-4950-4178-AD01-7A0569E00A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72A42BC8-4950-4178-AD01-7A0569E00A88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7AD7827-F59B-458D-8185-73A4A7079C65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7AD7827-F59B-458D-8185-73A4A7079C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7AD7827-F59B-458D-8185-73A4A7079C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7AD7827-F59B-458D-8185-73A4A7079C65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
